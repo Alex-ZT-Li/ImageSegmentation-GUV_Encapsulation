@@ -18,19 +18,30 @@ Code requires MATLAB version R2021a or greater with packages:
 (Note: Tested on MATLAB version R2021a)
 
 ## Description
-Performs image segmentation to detect and analyze giant unilamellar vesicles (GUVs) from fluorescence microscopy images and determines the encapsulation efficiency of individual GUVs using a relative encapsulation method. 
+Performs image segmentation to detect and analyze giant unilamellar vesicles (GUVs) from fluorescence microscopy images and determines the encapsulation efficiency of individual GUVs using a relative encapsulation method. A selection routine is used to determine what segmented objects are GUVs using a coefficient of variation analysis method. 
 
 ## Instructions
 
 1. Place all .m files (7 total) in the same folders with the .czi image files.
 
+    ```
+    File List:
+    1. Run_All.m
+    2. SegmentObjects_RelEncap.m
+    3. SelectObjectsAll_CV.m
+    4. GenerateMontageSegmented.m
+    5. GenerateMontageSelectedCV.m
+    6. Compile_Encap.m
+    7. RelEncap.m
+    ```
+
 2. Run "Run_All.m" for running the entire processing chain.
 
-3. "Run_all.m" will run through the following codes described here in order:
+3. "Run_All.m" will run through the following codes described here in order:
 
     * SegmentObjects_RelEncap.m - Will segment all objects in the .czi images and measure both total and core intensity from the objects. Outputs a .mat file per czi image into the generated "Segmented_mat" folder.
 
-    * SelectObjectsAll_CV - Selects likely vesicles from segmented objects using a CV analysis method. Must check lower bound (lb) values to see if selection is accurate for your image conditions. You can check by looking at the montage. Lower bound refers to the minimum CV values necessary to be considered a vesicle. Outputs a mat file per czi image into the generated "Selected_mat_all" folder.
+    * SelectObjectsAll_CV.m - Selects likely vesicles from segmented objects using a coefficient of variation (CV) analysis method. Must check lower bound (lb) values to see if selection is accurate for your image conditions. You can check by looking at the montage. Lower bound refers to the minimum CV values necessary to be considered a vesicle. Outputs a mat file per czi image into the generated "Selected_mat_all" folder.
 
     * GenerateMontageSelectedCV.m - Provides reference images to check processing quality. Outputs a montage images of selected and segmented vesicles, one for each czi image file. Will output a reference image on the left side. On the right side, it will contain the reference image with segmented (white overlay) and selected vesicles (red overlay).
 **NOTE: This can take considerable amount of time to run. If all processing parameters are known to work, you could consider skipping this processing step.**
