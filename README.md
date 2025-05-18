@@ -1,5 +1,8 @@
 # GUV-ImageDetection-Encapsulation
 
+## Description
+Performs image segmentation to detect and analyze giant unilamellar vesicles (GUVs) from fluorescence microscopy images and determines the encapsulation efficiency of individual GUVs using a relative encapsulation method. A selection routine is used to determine what segmented objects are GUVs using a coefficient of variation analysis method. 
+
 ## Requirements:
 Code requires MATLAB version R2021a or greater with packages:
 
@@ -16,9 +19,6 @@ Code requires MATLAB version R2021a or greater with packages:
 - (6 of 6) Computer Vision Toolbox, version 10.0 or greater.
 
 (Note: Tested on MATLAB version R2021a)
-
-## Description
-Performs image segmentation to detect and analyze giant unilamellar vesicles (GUVs) from fluorescence microscopy images and determines the encapsulation efficiency of individual GUVs using a relative encapsulation method. A selection routine is used to determine what segmented objects are GUVs using a coefficient of variation analysis method. 
 
 ## Instructions
 
