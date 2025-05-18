@@ -1,4 +1,4 @@
-# GUV-ImageDetection-Encapsulation
+# GUV-ImageSegmentation-Encapsulation
 
 Authors: Alexander Zhan Tu Li and Anand Bala Subramaniam
 
