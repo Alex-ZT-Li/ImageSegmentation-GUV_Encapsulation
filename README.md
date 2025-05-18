@@ -60,7 +60,7 @@ Performs image segmentation to detect and analyze giant unilamellar vesicles (GU
 
     * RelEncap.m - Post processing code. Calculations the relative encapsulation for the core intensity and total intensity data. Outputs various figures and a "Rel_Encap_Single.mat" file. 
 
-        *Key Parameters for e):
+        * Key Parameters for e):
          ```
          dia_all 	- list of all diameters in microns for each vesicle.
          rel_encap 	- list of all relative encapsulation values based on total encapsulated intensity.
