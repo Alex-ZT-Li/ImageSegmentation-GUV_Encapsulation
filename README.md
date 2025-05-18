@@ -3,7 +3,7 @@
 Authors: Alexander Zhan Tu Li and Anand Bala Subramaniam
 
 ## Description
-Performs image segmentation to detect and analyze giant unilamellar vesicles (GUVs) from fluorescence microscopy images and determines the encapsulation efficiency of individual GUVs using a relative encapsulation method. A selection routine is used to determine what segmented objects are GUVs using a coefficient of variation analysis method. The GUVs and encapsulated cargo should be fluorescently labeled in a two channel .czi image file.  
+Performs image segmentation to detect and analyze giant unilamellar vesicles (GUVs) from fluorescence microscopy images and determines the encapsulation efficiency of individual GUVs using a relative encapsulation method. A selection routine is used to determine what segmented objects are GUVs using a coefficient of variation analysis method. The GUVs and encapsulated cargo should be fluorescently labeled in a two channel .czi image file. This code requires a known concentration of the cargo present in the background of the image to determine the relative encapsulation within the GUVs and the imaging parameters should be set so only the internal of the GUVs are captured within the imaging voxels.
 
 ## Requirements:
 Code requires MATLAB version R2021a or greater with packages:
