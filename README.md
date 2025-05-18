@@ -3,17 +3,17 @@
 ## Requirements:
 Code requires MATLAB version R2021a or greater with packages:
 
-(1 of 6) Bio-Formats Plugin for MATLAB, version 5.3.4 or greater (External plugin from Open Microscopy Environment)
+- (1 of 6) Bio-Formats Plugin for MATLAB, version 5.3.4 or greater (External plugin from Open Microscopy Environment)
 
-(2 of 6) Image Processing Toolbox, version 11.3 or greater
+- (2 of 6) Image Processing Toolbox, version 11.3 or greater
 
-(3 of 6) Curve Fitting Toolbox, version 3.5.13 or greater
+- (3 of 6) Curve Fitting Toolbox, version 3.5.13 or greater
 
-(4 of 6) Signal Processing Toolbox, version 8.6 or greater
+- (4 of 6) Signal Processing Toolbox, version 8.6 or greater
 
-(5 of 6) Statistics and Machine Learning Toolbox, version 12.1 or greater.
+- (5 of 6) Statistics and Machine Learning Toolbox, version 12.1 or greater.
 
-(6 of 6) Computer Vision Toolbox, version 10.0 or greater.
+- (6 of 6) Computer Vision Toolbox, version 10.0 or greater.
 
 (Note: Tested on MATLAB version R2021a)
 
@@ -74,7 +74,9 @@ Performs image segmentation to detect and analyze giant unilamellar vesicles (GU
         * Key Parameters for "Rel_Encap_Single.mat":
          ```
          dia_all 	- list of all diameters in microns for each vesicle.
+         
          rel_encap 	- list of all relative encapsulation values based on total encapsulated intensity.
+         
          rel_encapcore 	- list of all relative encapsulation values based on core encapsulated intensity.
          ```
 
