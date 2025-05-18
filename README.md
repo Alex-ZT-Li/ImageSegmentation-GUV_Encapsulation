@@ -28,16 +28,16 @@ Performs image segmentation to detect and analyze giant unilamellar vesicles (GU
 
 3. "Run_all.m" will run through the following codes described here in order:
 
-a. SegmentObjects_RelEncap.m - Will segment all objects in the .czi images and measure both total and core intensity from the objects. Outputs a .mat file per czi image into the generated "Segmented_mat" folder.
+    * SegmentObjects_RelEncap.m - Will segment all objects in the .czi images and measure both total and core intensity from the objects. Outputs a .mat file per czi image into the generated "Segmented_mat" folder.
 
-b. SelectObjectsAll_CV - Selects likely vesicles from segmented objects using a CV analysis method. Must check lower bound (lb) values to see if selection is accurate for your image conditions. You can check by looking at the montage. Lower bound refers to the minimum CV values necessary to be considered a vesicle. Outputs a mat file per czi image into the generated "Selected_mat_all" folder.
+    * SelectObjectsAll_CV - Selects likely vesicles from segmented objects using a CV analysis method. Must check lower bound (lb) values to see if selection is accurate for your image conditions. You can check by looking at the montage. Lower bound refers to the minimum CV values necessary to be considered a vesicle. Outputs a mat file per czi image into the generated "Selected_mat_all" folder.
 
-c. GenerateMontageSelectedCV.m - Provides reference images to check processing quality. Outputs a montage images of selected and segmented vesicles, one for each czi image file. Will output a reference image on the left side. On the right side, it will contain the reference image with segmented (white overlay) and selected vesicles (red overlay).
+    * GenerateMontageSelectedCV.m - Provides reference images to check processing quality. Outputs a montage images of selected and segmented vesicles, one for each czi image file. Will output a reference image on the left side. On the right side, it will contain the reference image with segmented (white overlay) and selected vesicles (red overlay).
 NOTE: This can take considerable amount of time to run. If all processing parameters are known to work, you could consider skipping this processing step.
 
-d. Compile_Encap.m - Compiles all relevant vesicle data from the "Selected_mat_all" folder into one output file "Compiled_data_single.mat" in the "Processed_mat" folder. Note a vesicle diameter minimum value must be set here in the parameters. Defaults to 3 microns. 
+    * Compile_Encap.m - Compiles all relevant vesicle data from the "Selected_mat_all" folder into one output file "Compiled_data_single.mat" in the "Processed_mat" folder. Note a vesicle diameter minimum value must be set here in the parameters. Defaults to 3 microns. 
 
-Key Parameters for d)
+        *Key Parameters for d)
 bgshapes 	- list of background intensity values of each czi image.
 dia 	 	- list of diameter values in microns for each vesicle.
 encap 	 	- list of total encapsulated intensity values (e.g. intensity of the cargo (FITC-BSA))
