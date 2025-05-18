@@ -33,14 +33,16 @@ Performs image segmentation to detect and analyze giant unilamellar vesicles (GU
     * SelectObjectsAll_CV - Selects likely vesicles from segmented objects using a CV analysis method. Must check lower bound (lb) values to see if selection is accurate for your image conditions. You can check by looking at the montage. Lower bound refers to the minimum CV values necessary to be considered a vesicle. Outputs a mat file per czi image into the generated "Selected_mat_all" folder.
 
     * GenerateMontageSelectedCV.m - Provides reference images to check processing quality. Outputs a montage images of selected and segmented vesicles, one for each czi image file. Will output a reference image on the left side. On the right side, it will contain the reference image with segmented (white overlay) and selected vesicles (red overlay).
-NOTE: This can take considerable amount of time to run. If all processing parameters are known to work, you could consider skipping this processing step.
+**NOTE: This can take considerable amount of time to run. If all processing parameters are known to work, you could consider skipping this processing step.**
 
     * Compile_Encap.m - Compiles all relevant vesicle data from the "Selected_mat_all" folder into one output file "Compiled_data_single.mat" in the "Processed_mat" folder. Note a vesicle diameter minimum value must be set here in the parameters. Defaults to 3 microns. 
 
         * Key Parameters for data in Processed_mat
          ```
          bgshapes 	- list of background intensity values of each czi image.
+         
          dia 	 	- list of diameter values in microns for each vesicle.
+         
          encap 	 	- list of total encapsulated intensity values (e.g. intensity of the cargo (FITC-BSA))
          
          encapcore 	- list of core encapsulated intensity values
@@ -56,12 +58,13 @@ NOTE: This can take considerable amount of time to run. If all processing parame
          Xscale 		- Xscale value (micron/pixel) determined from the czi metadata.
          ```
 
-e) RelEncap.m - Post processing code. Calculations the relative encapsulation for the core intensity and total intensity data. Outputs various figures and a "Rel_Encap_Single.mat" file. 
+    * RelEncap.m - Post processing code. Calculations the relative encapsulation for the core intensity and total intensity data. Outputs various figures and a "Rel_Encap_Single.mat" file. 
 
-Key Parameters for e):
-dia_all 	- list of all diameters in microns for each vesicle.
-rel_encap 	- list of all relative encapsulation values based on total encapsulated intensity.
-rel_encapcore 	- list of all relative encapsulation values based on core encapsulated intensity.
+        *Key Parameters for e):
+         ```
+         dia_all 	- list of all diameters in microns for each vesicle.
+         rel_encap 	- list of all relative encapsulation values based on total encapsulated intensity.
+         rel_encapcore 	- list of all relative encapsulation values based on core encapsulated intensity.
+         ```
 
-
-4. Optional Code: GenerateMontageSegmented.m performs the same task as GenerateMontageSelectedCV.m but without the selected vesicle data. Usually unnecessary to run both unless troubleshooting something specific.
+    * Optional Codes: GenerateMontageSegmented.m performs the same task as GenerateMontageSelectedCV.m but includes all detected objects. Usually unnecessary to run both unless troubleshooting segmentation issues.
