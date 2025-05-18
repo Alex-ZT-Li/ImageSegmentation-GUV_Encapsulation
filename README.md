@@ -37,7 +37,7 @@ Performs image segmentation to detect and analyze giant unilamellar vesicles (GU
 
     * Compile_Encap.m - Compiles all relevant vesicle data from the "Selected_mat_all" folder into one output file "Compiled_data_single.mat" in the "Processed_mat" folder. Note a vesicle diameter minimum value must be set here in the parameters. Defaults to 3 microns. 
 
-        * Key Parameters for data in Processed_mat
+        * Key Parameters for data in "Compiled_data_single.mat"
          ```
          bgshapes 	- list of background intensity values of each czi image.
          
@@ -60,7 +60,7 @@ Performs image segmentation to detect and analyze giant unilamellar vesicles (GU
 
     * RelEncap.m - Post processing code. Calculations the relative encapsulation for the core intensity and total intensity data. Outputs various figures and a "Rel_Encap_Single.mat" file. 
 
-        * Key Parameters for e):
+        * Key Parameters for "Rel_Encap_Single.mat":
          ```
          dia_all 	- list of all diameters in microns for each vesicle.
          rel_encap 	- list of all relative encapsulation values based on total encapsulated intensity.
