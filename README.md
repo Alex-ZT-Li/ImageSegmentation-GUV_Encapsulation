@@ -89,3 +89,8 @@ Code requires MATLAB version R2021a or greater with packages:
 
     * Optional Codes:
         * GenerateMontageSegmented.m - performs the same task as GenerateMontageSelectedCV.m but includes all detected objects. Usually unnecessary to run both unless troubleshooting segmentation issues.
+     
+## Demo
+A sample dataset has been included, follow instructions above on the provided sample dataset. Outputs are described in the instructions; the final output is "Rel_Encap_Single.mat" located within the "Processed_Mat" Folder. 
+
+Estimated Demo Processing Time = <10 minutes.
