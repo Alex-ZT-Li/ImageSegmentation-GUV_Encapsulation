@@ -37,16 +37,24 @@ NOTE: This can take considerable amount of time to run. If all processing parame
 
     * Compile_Encap.m - Compiles all relevant vesicle data from the "Selected_mat_all" folder into one output file "Compiled_data_single.mat" in the "Processed_mat" folder. Note a vesicle diameter minimum value must be set here in the parameters. Defaults to 3 microns. 
 
-        *Key Parameters for d)
-bgshapes 	- list of background intensity values of each czi image.
-dia 	 	- list of diameter values in microns for each vesicle.
-encap 	 	- list of total encapsulated intensity values (e.g. intensity of the cargo (FITC-BSA))
-encapcore 	- list of core encapsulated intensity values
-greenpixels 	- list of all pixel intensites for the encapsulated cargo (e.g. FITC-BSA) from each vesicle.
-redpixels	- list of all pixel intensities for the lipid channel from each vesicle (e.g. DOPC-RhPE)
-red_chan	- list of total intensity values from the lipid channel (e.g. DOPC-RhPE)
-pos 		- list of file numbers each vescile comes from (note might not match file names, confirm processing order)
-Xscale 		- Xscale value (micron/pixel) determined from the czi metadata.
+        * Key Parameters for data in Processed_mat
+         ```
+         bgshapes 	- list of background intensity values of each czi image.
+         dia 	 	- list of diameter values in microns for each vesicle.
+         encap 	 	- list of total encapsulated intensity values (e.g. intensity of the cargo (FITC-BSA))
+         
+         encapcore 	- list of core encapsulated intensity values
+         
+         greenpixels 	- list of all pixel intensites for the encapsulated cargo (e.g. FITC-BSA) from each vesicle.
+         
+         redpixels	- list of all pixel intensities for the lipid channel from each vesicle (e.g. DOPC-RhPE)
+         
+         red_chan	- list of total intensity values from the lipid channel (e.g. DOPC-RhPE)
+         
+         pos 		- list of file numbers each vescile comes from (note might not match file names, confirm processing order)
+         
+         Xscale 		- Xscale value (micron/pixel) determined from the czi metadata.
+         ```
 
 e) RelEncap.m - Post processing code. Calculations the relative encapsulation for the core intensity and total intensity data. Outputs various figures and a "Rel_Encap_Single.mat" file. 
 
