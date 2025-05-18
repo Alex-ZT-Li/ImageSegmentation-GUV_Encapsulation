@@ -1,5 +1,7 @@
 # GUV-ImageDetection-Encapsulation
 
+Authors: Alexander Zhan Tu Li and Anand Bala Subramaniam
+
 ## Description
 Performs image segmentation to detect and analyze giant unilamellar vesicles (GUVs) from fluorescence microscopy images and determines the encapsulation efficiency of individual GUVs using a relative encapsulation method. A selection routine is used to determine what segmented objects are GUVs using a coefficient of variation analysis method. 
 
