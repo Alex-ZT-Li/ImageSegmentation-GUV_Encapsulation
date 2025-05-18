@@ -54,8 +54,8 @@ Code requires MATLAB version R2021a or greater with packages:
 
     * Compile_Encap.m - Compiles all relevant vesicle data from the "Selected_mat_all" folder into one output file "Compiled_data_single.mat" in the "Processed_mat" folder. Note a vesicle diameter minimum value must be set here in the parameters. Defaults to 3 microns. 
 
-        * Key Parameters for data in "Compiled_data_single.mat"
          ```
+         Key Parameters for data in "Compiled_data_single.mat"
          bgshapes 	- list of background intensity values of each czi image.
          
          dia 	 	- list of diameter values in microns for each vesicle.
@@ -77,8 +77,8 @@ Code requires MATLAB version R2021a or greater with packages:
 
     * RelEncap.m - Post processing code. Calculations the relative encapsulation for the core intensity and total intensity data. Outputs various figures and a "Rel_Encap_Single.mat" file. 
 
-        * Key Parameters for "Rel_Encap_Single.mat":
          ```
+         Key Parameters for "Rel_Encap_Single.mat":
          dia_all 	- list of all diameters in microns for each vesicle.
          
          rel_encap 	- list of all relative encapsulation values based on total encapsulated intensity.
@@ -86,4 +86,5 @@ Code requires MATLAB version R2021a or greater with packages:
          rel_encapcore 	- list of all relative encapsulation values based on core encapsulated intensity.
          ```
 
-    * Optional Codes: GenerateMontageSegmented.m performs the same task as GenerateMontageSelectedCV.m but includes all detected objects. Usually unnecessary to run both unless troubleshooting segmentation issues.
+    * Optional Codes:
+        * GenerateMontageSegmented.m - performs the same task as GenerateMontageSelectedCV.m but includes all detected objects. Usually unnecessary to run both unless troubleshooting segmentation issues.
